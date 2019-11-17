@@ -3,13 +3,16 @@ package in.taskoo.feedback.entity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Version;
 
+import in.taskoo.feedback.entity.listener.BaseEntityListener;
 import lombok.Data;
 
-@MappedSuperclass
 @Data
+@MappedSuperclass
+@EntityListeners(BaseEntityListener.class)
 public class BaseFeedbackEntity implements Serializable {
   private static final long serialVersionUID = 486443016325666342L;
   

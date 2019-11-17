@@ -58,7 +58,7 @@ public class FeedbackMapper {
     return new FeedbackDataEntity()
     .setRating(feedbackData.getRating())
     .setComment(feedbackData.getComment())
-        .setFeedbackMaster(findFeedbackMasterEntity(feedbackData.getFeedbackMster()));
+        .setFeedbackMaster(findFeedbackMasterEntity(feedbackData.getFeedbackMaster()));
   }
 
   private FeedbackMasterEntity findFeedbackMasterEntity(FeedbackMaster feedbackMaster) {

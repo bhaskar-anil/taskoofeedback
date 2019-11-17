@@ -1,13 +1,11 @@
 package in.taskoo.feedback.entity.listener;
 
-import java.time.Clock;
 import java.time.LocalDateTime;
 
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import in.taskoo.feedback.entity.BaseFeedbackEntity;
 
@@ -19,9 +17,6 @@ public class BaseEntityListener {
   public static final String CREATE_PROGRAM = "taskoo_feedback_create_program";
   public static final String UPDATE_USER = "taskoo_feedback_update_user";
   public static final String UPDATE_PROGRAM = "taskoo_feedback_update_program";
-
-  @Autowired
-  private Clock clock;
 
   /**
    * It runs before saving data into DB.
@@ -39,8 +34,8 @@ public class BaseEntityListener {
     entity.setCreatedUser(user);
 
     entity.setSystemDeleteFlag(Boolean.FALSE);
-    entity.setSystemCreatedDateTime(LocalDateTime.now(clock));
-    entity.setSystemUpdatedDateTime(LocalDateTime.now(clock));
+    entity.setSystemCreatedDateTime(LocalDateTime.now());
+    entity.setSystemUpdatedDateTime(LocalDateTime.now());
     entity.setUpdatedProgram(programName);
     entity.setSystemUpdateCount(0);
   }
@@ -55,7 +50,7 @@ public class BaseEntityListener {
 
     String programName = StringUtils.substring(UPDATE_PROGRAM, 0, DB_COLUMN_LIMIT);
 
-    entity.setSystemUpdatedDateTime(LocalDateTime.now(clock));
+    entity.setSystemUpdatedDateTime(LocalDateTime.now());
     entity.setUpdatedProgram(programName);
   }
 }
