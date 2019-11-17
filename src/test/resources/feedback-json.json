@@ -1,0 +1,43 @@
+// user can be a seeker or tasker
+// the client will call different api for seekers-feedback and taskers-feedback
+
+
+{
+	"task" : {
+		"id" : 100,
+		"title" : "i want to move my sofa",
+		"taskCode" : "i_want_to_move_sofa"
+	},
+	"category" : {
+		"id" : 100,
+		"title" : "packing and moving",
+		"categoryCode" : "packing_moving"
+	},
+	
+	"feedbackData" : [
+		{
+			"feedbackOf" : {
+				"id" : 10,
+				"feedbackMaster" : "Quality of work"
+			},
+			"rating" : 4,
+			"comment" : null
+		},
+		{
+			"feedbackOf" : {
+				"id" : 20,
+				"feedbackMaster" : "Professionalism"
+			},
+			"rating" : 4,
+			"comment" : null
+		}
+		],
+	"user" : {
+		"id" : 1,
+		"email" : "asdads@mail.com",
+		"shortName" : "shibani jena",
+		"longName" : "shibani shankar jena cto"
+	},
+	
+	"comment" : "i am really happy about the service provided to me, i want to get serviced again"
+}
