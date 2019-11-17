@@ -2,8 +2,8 @@
 feedback api for taskoo
 
 ## Supports following APIs:
- - `/api/feedbacks/ofseeker`
- - `/api/feedbacks/ofseeker`
+ 1. `/api/feedbacks/ofseeker`
+ 2. `/api/feedbacks/ofseeker`
 
 `POST`
 
@@ -22,17 +22,17 @@ feedback api for taskoo
 	
 	"feedbackData" : [
 		{
-			"feedbackOf" : {
+			"feedbackMaster" : {
 				"id" : 10,
-				"feedbackMaster" : "Quality of work"
+				"feedbackMasterTitle" : "Quality of work"
 			},
 			"rating" : 4,
 			"comment" : null
 		},
 		{
-			"feedbackOf" : {
+			"feedbackMaster" : {
 				"id" : 20,
-				"feedbackMaster" : "Professionalism"
+				"feedbackMasterTitle" : "Professionalism"
 			},
 			"rating" : 4,
 			"comment" : null
