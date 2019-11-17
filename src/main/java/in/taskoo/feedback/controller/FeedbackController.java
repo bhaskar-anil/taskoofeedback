@@ -25,6 +25,6 @@ public class FeedbackController {
 
   @PostMapping("/oftasker")
   public void ofTasker(@Valid @RequestBody Feedback feedback) {
-    feedbackService.saveFeedbackOfSeeker(feedback);
+    feedbackService.saveFeedbackOfTasker(feedback);
   }
 }

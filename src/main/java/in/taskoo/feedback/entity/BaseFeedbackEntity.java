@@ -13,11 +13,14 @@ import lombok.Data;
 public class BaseFeedbackEntity implements Serializable {
   private static final long serialVersionUID = 486443016325666342L;
   
-  private LocalDateTime createdDateTime;
-  private LocalDateTime updatedDateTime;
+  private String updatedUser;
+  private String createdUser;
+  private String updatedProgram;
+  private String createdProgram;
+  
+  private LocalDateTime systemCreatedDateTime;
+  private LocalDateTime systemUpdatedDateTime;
   private Boolean systemDeleteFlag;
   @Version
-  private Integer systemUpdateCount = 0;
-  private String updatedBy;
-  private String createdBy;
+  private Integer systemUpdateCount;
 }
