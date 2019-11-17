@@ -2,8 +2,8 @@
 feedback api for taskoo
 
 ## Supports following APIs:
- - /api/feedbacks/ofseeker
- - /api/feedbacks/ofseeker
+ - `/api/feedbacks/ofseeker`
+ - `/api/feedbacks/ofseeker`
 
 `POST`
 
